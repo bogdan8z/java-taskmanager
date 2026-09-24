@@ -45,8 +45,13 @@ dotnet new webapi
 
 
 ```text
-pom.xml
-   ↓
-.csproj
+Java                 .NET
+
+java                  dotnet runtime
+javac                 C# compiler
+mvn                   dotnet/MSBuild + package tooling
+pom.xml               .csproj
+JDK                   .NET SDK
+JVM                   CLR
 ```
 
