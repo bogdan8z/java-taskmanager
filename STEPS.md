@@ -3,34 +3,22 @@
 
 ## Step 2: Create your first Spring Boot API
 
-- Go to Spring Initializr.
-- Configure:
+- Use Spring Initializr: Run:
 
 ```text
-Project:       Maven
-Language:      Java
-Spring Boot:   4.0.8
-Group:         com.example
-Artifact:      demo
-Name:          demo
-Packaging:     Jar
-Java:          25
+curl https://start.spring.io/starter.zip \
+  -d type=maven-project \
+  -d language=java \
+  -d javaVersion=21 \
+  -d groupId=com.example \
+  -d artifactId=taskmanager \
+  -d name=taskmanager \
+  -d packageName=com.example.taskmanager \
+  -d dependencies=web,data-jpa,validation,postgresql \
+  -o taskmanager.zip
 ```
 
-- Spring Initializr currently lists Spring Boot 4.0.8 as a stable option and Java 25 as supported.
-- Click Add Dependencies and select:
-
-```text
-Spring Web
-```
-
-- Then click:
-
-```text
-Generate
-```
-
-- You'll get something like: demo.zip
+- you'll get taskmanager.zip
 
 **.NET mental mapping**
 - At this point think:
@@ -42,7 +30,6 @@ dotnet new webapi
 ```
 
 - And: 
-
 
 ```text
 Java                            .NET
@@ -59,4 +46,9 @@ target/                         bin/ + obj/
 mvn / ./mvnw                    dotnet
 Maven repositories              NuGet
 ```
+- Extract
 
+```text
+unzip taskmanager.zip
+rm taskmanager.zip
+```
