@@ -52,3 +52,100 @@ Maven repositories              NuGet
 unzip taskmanager.zip
 rm taskmanager.zip
 ```
+
+## Step 3: Look at pom.xml
+- Open:
+
+```text
+pom.xml
+```
+
+- You'll find something along these lines:
+
+```xml
+<project>
+...
+ 
+<groupId>com.example</groupId>
+<artifactId>taskmanager</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+ 
+<properties>
+<java.version>21</java.version>
+</properties>
+ 
+<dependencies>
+...
+</dependencies>
+ 
+</project>
+```
+
+- groupId
+
+```xml
+<groupId>com.example</groupId>
+```
+
+- This identifies the organization/group producing the artifact.
+- You'll commonly see things like:
+
+```tezt
+org.springframework
+org.apache.maven
+com.fasterxml.jackson
+```
+
+- Don't think of groupId as a C# namespace, although they are often related.
+
+-artifactId
+
+```xml
+<artifactId>taskmanager</artifactId>
+```
+
+-This identifies this particular project/artifact.
+-Together:
+
+```text
+com.example:taskmanager
+```
+
+- is roughly Maven's identity for your artifact.
+- You'll encounter this constantly in Java
+
+## Step 4: Look at dependencies
+- You'll see dependencies in the POM.
+- For example, there will be Spring web functionality represented as a Maven dependency.
+- Your mental model should be:
+- **.NET**
+
+```xml
+<ItemGroup>
+    <PackageReference Include="Something" Version="..." />
+</ItemGroup>
+```
+
+- **Maven**
+
+```xml
+<dependencies>
+
+    <dependency>
+        <groupId>...</groupId>
+        <artifactId>...</artifactId>
+    </dependency>
+
+</dependencies>
+```
+
+- You'll notice something interesting.
+- There frequently isn't a:
+
+```xml
+<version>...</version>
+```
+
+- on every Spring dependency.
+- Don't assume that means "latest version."
+- Spring Boot provides dependency management so compatible versions of many dependencies can be managed centrally.
