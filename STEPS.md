@@ -149,3 +149,45 @@ com.example:taskmanager
 - on every Spring dependency.
 - Don't assume that means "latest version."
 - Spring Boot provides dependency management so compatible versions of many dependencies can be managed centrally.
+
+## Step 5: Understand Maven Wrapper
+- You now have:
+
+```text
+mvnw
+mvnw.cmd
+```
+- These are Maven Wrapper scripts.
+- On Linux/Codespaces:
+
+```shell
+./mvnw
+```
+
+- On Windows:
+
+```shell
+.\mvnw.cmd
+```
+
+- So although this works if Maven is installed:
+
+```shell
+mvn test
+```
+
+- I want you to use:
+
+```shell
+./mvnw test
+```
+
+- for this project.
+
+- Conceptually:
+
+```text
+./mvnw
+```
+- means:
+- use the Maven setup associated with this project.
