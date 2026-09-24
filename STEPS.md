@@ -45,13 +45,18 @@ dotnet new webapi
 
 
 ```text
-Java                 .NET
+Java                            .NET
 
-java                  dotnet runtime
-javac                 C# compiler
-mvn                   dotnet/MSBuild + package tooling
-pom.xml               .csproj
-JDK                   .NET SDK
-JVM                   CLR
+java                            dotnet runtime
+javac                           C# compiler
+mvn                             dotnet/MSBuild + package tooling
+pom.xml                         .csproj
+JDK                             .NET SDK
+JVM                             CLR
+TaskmanagerApplication.java     Program.cs
+application.properties          appsettings.json
+target/                         bin/ + obj/
+mvn / ./mvnw                    dotnet
+Maven repositories              NuGet
 ```
 
